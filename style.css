@@ -1960,6 +1960,532 @@ section {
     font-size: 1.1rem;
 }
 
+/* Portfolio Project Card Styles */
+.portfolio-card {
+    background: linear-gradient(135deg, #fef5ff 0%, #fff8fc 100%);
+    border: 3px solid #d946ef;
+    border-image: linear-gradient(45deg, #d946ef, #a855f7, #ec4899, #d946ef) 1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.portfolio-card::before {
+    content: '💻';
+    background: linear-gradient(135deg, #fef5ff 0%, #fff8fc 100%);
+    border: 2px solid #d946ef;
+}
+
+.portfolio-card:hover {
+    border-color: #a855f7;
+    box-shadow: 0 15px 35px -5px rgba(217, 70, 239, 0.4);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 300px;
+}
+
+.portfolio-left {
+    background: linear-gradient(135deg, #d946ef 0%, #a855f7 50%, #ec4899 100%);
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.portfolio-screenshot-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.portfolio-screenshot-wrapper img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio-card:hover .portfolio-screenshot-wrapper {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.portfolio-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-right {
+    padding: 2rem;
+    background: linear-gradient(135deg, #fef5ff 0%, #fff8fc 100%);
+}
+
+.portfolio-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.portfolio-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-card .project-tech {
+    margin-bottom: 1.5rem;
+}
+
+/* Colorful Tech Tags */
+.tech-tag.tech-js {
+    background: linear-gradient(135deg, #f7df1e 0%, #f0db4f 100%);
+    color: #2d2d2d;
+    border-color: #f7df1e;
+    font-weight: 600;
+}
+
+.tech-tag.tech-html {
+    background: linear-gradient(135deg, #e34c26 0%, #f06529 100%);
+    color: white;
+    border-color: #e34c26;
+    font-weight: 600;
+}
+
+.tech-tag.tech-css {
+    background: linear-gradient(135deg, #264de4 0%, #2965f1 100%);
+    color: white;
+    border-color: #264de4;
+    font-weight: 600;
+}
+
+.tech-tag.tech-responsive {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    color: white;
+    border-color: #06b6d4;
+    font-weight: 600;
+}
+
+.tech-tag.tech-animation {
+    background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+    color: white;
+    border-color: #d946ef;
+    font-weight: 600;
+}
+
+.tech-tag.tech-git {
+    background: linear-gradient(135deg, #f05032 0%, #e44c30 100%);
+    color: white;
+    border-color: #f05032;
+    font-weight: 600;
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.portfolio-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid transparent;
+}
+
+.portfolio-btn-repo {
+    background: #24292e;
+    color: white;
+    border-color: #24292e;
+}
+
+.portfolio-btn-repo:hover {
+    background: #1a1e22;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(36, 41, 46, 0.3);
+}
+
+.github-icon {
+    flex-shrink: 0;
+}
+
+.portfolio-btn-live {
+    background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+    color: white;
+    border-color: #d946ef;
+}
+
+.portfolio-btn-live:hover {
+    background: linear-gradient(135deg, #c026d3 0%, #9333ea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(217, 70, 239, 0.4);
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+/* AI Chatbox Project Card Styles */
+.ai-chatbox-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 3px solid #06b6d4;
+    border-image: linear-gradient(45deg, #06b6d4, #0891b2, #0e7490, #06b6d4) 1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ai-chatbox-card::before {
+    content: '🤖';
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #06b6d4;
+}
+
+.ai-chatbox-card:hover {
+    border-color: #0891b2;
+    box-shadow: 0 15px 35px -5px rgba(6, 182, 212, 0.4);
+}
+
+.ai-chatbox-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 300px;
+}
+
+.ai-chatbox-left {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-chatbox-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: ai-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes ai-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.ai-chatbox-screenshot-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.ai-chatbox-screenshot-wrapper img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.ai-chatbox-card:hover .ai-chatbox-screenshot-wrapper {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.ai-chatbox-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ai-chatbox-right {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.ai-chatbox-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.ai-chatbox-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.ai-chatbox-card .project-tech {
+    margin-bottom: 1.5rem;
+}
+
+/* AI Chatbox Tech Tags */
+.tech-tag.tech-python {
+    background: linear-gradient(135deg, #3776ab 0%, #ffd43b 100%);
+    color: white;
+    border-color: #3776ab;
+    font-weight: 600;
+}
+
+.tech-tag.tech-streamlit {
+    background: linear-gradient(135deg, #ff4b4b 0%, #ff6b6b 100%);
+    color: white;
+    border-color: #ff4b4b;
+    font-weight: 600;
+}
+
+.tech-tag.tech-groq {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    color: white;
+    border-color: #a855f7;
+    font-weight: 600;
+}
+
+.tech-tag.tech-cloud {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    color: white;
+    border-color: #ec4899;
+    font-weight: 600;
+}
+
+.ai-chatbox-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.ai-chatbox-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid transparent;
+}
+
+.ai-chatbox-btn-repo {
+    background: #24292e;
+    color: white;
+    border-color: #24292e;
+}
+
+.ai-chatbox-btn-repo:hover {
+    background: #1a1e22;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(36, 41, 46, 0.3);
+}
+
+.ai-chatbox-btn-live {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    color: white;
+    border-color: #06b6d4;
+}
+
+.ai-chatbox-btn-live:hover {
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(6, 182, 212, 0.4);
+}
+
+/* Responsive AI Chatbox Card */
+@media (max-width: 968px) {
+    .ai-chatbox-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .ai-chatbox-left {
+        padding: 2rem;
+        min-height: 280px;
+    }
+
+    .ai-chatbox-screenshot-wrapper {
+        max-width: 100%;
+    }
+
+    .ai-chatbox-right {
+        padding: 1.5rem;
+    }
+
+    .ai-chatbox-links {
+        flex-direction: column;
+    }
+
+    .ai-chatbox-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-chatbox-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .ai-chatbox-left {
+        padding: 1.5rem;
+        min-height: 240px;
+    }
+
+    .ai-chatbox-right h3 {
+        font-size: 1.3rem;
+    }
+
+    .ai-chatbox-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-chatbox-left {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+    .ai-chatbox-right {
+        padding: 1rem;
+    }
+
+    .ai-chatbox-right h3 {
+        font-size: 1.2rem;
+    }
+
+    .ai-chatbox-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive Portfolio Card */
+@media (max-width: 968px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .portfolio-left {
+        padding: 2rem;
+        min-height: 280px;
+    }
+
+    .portfolio-screenshot-wrapper {
+        max-width: 100%;
+    }
+
+    .portfolio-right {
+        padding: 1.5rem;
+    }
+
+    .portfolio-links {
+        flex-direction: column;
+    }
+
+    .portfolio-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .portfolio-left {
+        padding: 1.5rem;
+        min-height: 240px;
+    }
+
+    .portfolio-right h3 {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-left {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+    .portfolio-right {
+        padding: 1rem;
+    }
+
+    .portfolio-right h3 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+}
+
 /* Tablet styles */
 @media (max-width: 1024px) and (min-width: 769px) {
     .hero-content,
