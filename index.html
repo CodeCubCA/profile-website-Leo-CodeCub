@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo's Profile - Student Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="theme-color" content="#8B4513">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.svg" alt="LT Logo" class="logo-svg">
+                <span class="logo-text">Leo</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hello there! I'm the super sigma: <span class="highlight">Leo</span>!
+                </h1>
+                <p class="hero-subtitle">
+                    Gamer / Developer / Sigma
+                </p>
+                <p class="hero-description">
+                    Welcome to my super cool digital gaming space, grab a tasty snack, and start the epic gaming!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Get to know me</a>
+                    <a href="#projects" class="btn btn-secondary">View my work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="logo.svg" alt="LT Logo" class="hero-logo">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Leo</h3>
+                        <p>Student Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Hi, I'm Leo, A sigma that like playing, and develop games, if you are a sigma like me, great job!
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Year codong</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Learning</span>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <h3>What I'm passionate about:</h3>
+                        <ul>
+                            <li>🌐 Web Development</li>
+                            <li>📱 Mobile Apps</li>
+                            <li>🎮 Game Development</li>
+                            <li>🤖 AI & Machine Learning</li>
+                            <li>🎨 UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="game-showcase">
+                        <h3>Check out my Egg Shooter game!</h3>
+                        <div class="game-preview">
+                            <div class="game-screen">
+                                <div class="game-gradient">
+                                    <div class="floating-egg egg-1">🐣</div>
+                                    <div class="floating-egg egg-2">🥚</div>
+                                    <div class="floating-egg egg-3">🐣</div>
+                                    <div class="floating-egg egg-4">🍳</div>
+                                    <div class="floating-egg egg-5">🥚</div>
+                                    <div class="floating-egg egg-6">🐣</div>
+                                    <div class="floating-egg egg-7">🥚</div>
+                                    <div class="floating-egg egg-8">🍳</div>
+                                    <div class="floating-egg egg-9">🐣</div>
+                                    <div class="floating-egg egg-10">🥚</div>
+                                    <div class="floating-egg egg-11">🐣</div>
+                                    <div class="floating-egg egg-12">🍳</div>
+                                    <div class="floating-egg egg-13">🥚</div>
+                                    <div class="floating-egg egg-14">🐣</div>
+                                    <div class="floating-egg egg-15">🥚</div>
+                                    <div class="laser-sight">🎯</div>
+                                    <div class="game-message">
+                                        Click the flying eggs to score points! Reach 100 points to win! 🎯
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Here are some cool things I've been working on!</p>
+            <div class="projects-grid">
+
+                <div class="project-card epic-games-card" onclick="showGamesBoard()">
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Epic games</h3>
+                    <p>Click here to explore awesome games like Egg Shooter and Fishing Tycoon!</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="play-now-text">🎮 Click to Play Games! 🎮</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Leo's Profile. Made with ❤️ and lots of ☕</p>
+        </div>
+    </footer>
+
+    <!-- Games Choice Board -->
+    <div id="gamesBoard" class="games-board hidden">
+        <div class="games-container">
+            <div class="games-header">
+                <h2>🎮 Epic Games Collection 🎮</h2>
+                <button class="back-btn" onclick="hideGamesBoard()">
+                    <i class="fas fa-arrow-left"></i> Back to Main Page
+                </button>
+            </div>
+            <div class="games-grid">
+                <div class="game-card" onclick="playGame('egg-shooter')">
+                    <div class="game-icon">🥚</div>
+                    <h3>Egg Shooter</h3>
+                    <p>Click flying eggs to score points! Reach 100 points to win!</p>
+                    <div class="play-btn">Play Now</div>
+                </div>
+                <div class="game-card" onclick="playGame('fishing-tycoon')">
+                    <div class="game-icon">🎣</div>
+                    <h3>Fishing Tycoon</h3>
+                    <p>Build your fishing empire and catch the biggest fish in the ocean!</p>
+                    <div class="play-btn">Play Now</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

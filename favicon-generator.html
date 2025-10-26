@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <h2>LT Logo Favicon Generator</h2>
+    <p>Use this page to convert the SVG to PNG favicon:</p>
+
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw favicon directly on canvas
+        // Background circle
+        const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+        gradient.addColorStop(0, '#8B4513');
+        gradient.addColorStop(0.5, '#D2691E');
+        gradient.addColorStop(1, '#FFD700');
+
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(16, 16, 15, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // White border
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Letter L
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(7, 9, 3, 14);  // Vertical part
+        ctx.fillRect(7, 20, 7, 3);  // Horizontal part
+
+        // Letter T
+        ctx.fillRect(17, 9, 7, 3);  // Top horizontal
+        ctx.fillRect(19, 9, 3, 14); // Vertical part
+
+        // Convert to downloadable image
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = canvas.toDataURL();
+        link.innerHTML = 'Download favicon.png';
+        document.body.appendChild(link);
+    </script>
+</body>
+</html>

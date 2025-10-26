@@ -1,0 +1,59 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gaming-themed gradient -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="38" fill="url(#logoGradient)" filter="url(#shadow)" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- Inner decorative circle -->
+  <circle cx="40" cy="40" r="32" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+
+  <!-- Letter L -->
+  <g filter="url(#glow)">
+    <path d="M 20 25 L 20 55 L 35 55 L 35 50 L 26 50 L 26 25 Z"
+          fill="#FFFFFF"
+          stroke="#8B4513"
+          stroke-width="0.5"/>
+  </g>
+
+  <!-- Letter T -->
+  <g filter="url(#glow)">
+    <path d="M 45 25 L 45 30 L 50 30 L 50 55 L 56 55 L 56 30 L 61 30 L 61 25 Z"
+          fill="#FFFFFF"
+          stroke="#8B4513"
+          stroke-width="0.5"/>
+  </g>
+
+  <!-- Gaming controller accent -->
+  <g opacity="0.6">
+    <rect x="35" y="15" width="10" height="4" rx="2" fill="#FFD700"/>
+    <circle cx="37" cy="17" r="1" fill="#8B4513"/>
+    <circle cx="43" cy="17" r="1" fill="#8B4513"/>
+  </g>
+
+  <!-- Code brackets accent -->
+  <g opacity="0.4" stroke="#FFD700" stroke-width="1" fill="none">
+    <path d="M 15 35 L 12 40 L 15 45"/>
+    <path d="M 65 35 L 68 40 L 65 45"/>
+  </g>
+</svg>
