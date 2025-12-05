@@ -1980,21 +1980,17 @@ section {
     font-size: 1.1rem;
 }
 
-/* Portfolio Project Card Styles - Landscape Layout */
+/* Portfolio Project Card Styles - Side-by-Side Layout */
 .portfolio-card {
     background: linear-gradient(135deg, #fef5ff 0%, #fff8fc 100%);
     border: 3px solid #d946ef;
-    border-image: linear-gradient(45deg, #d946ef, #a855f7, #ec4899, #d946ef) 1;
+    border-radius: 12px;
     padding: 0;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-}
-
-.portfolio-card::before {
-    content: '💻';
-    background: linear-gradient(135deg, #fef5ff 0%, #fff8fc 100%);
-    border: 2px solid #d946ef;
+    flex-direction: row;
+    min-height: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-card:hover {
@@ -2004,11 +2000,14 @@ section {
 
 .portfolio-screenshot-wrapper {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 3;
+    width: 45%;
+    flex-shrink: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #d946ef 0%, #a855f7 50%, #ec4899 100%);
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-screenshot-wrapper::before {
@@ -2046,9 +2045,12 @@ section {
 }
 
 .portfolio-content {
-    padding: 0.5rem;
+    padding: 2rem;
     background: linear-gradient(135deg, #fef5ff 0%, #fff8fc 100%);
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .portfolio-content h3 {
@@ -2165,21 +2167,17 @@ section {
     margin-top: 2rem;
 }
 
-/* AI Chatbox Project Card Styles - Landscape Layout */
+/* AI Chatbox Project Card Styles - Side-by-Side Layout */
 .ai-chatbox-card {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     border: 3px solid #06b6d4;
-    border-image: linear-gradient(45deg, #06b6d4, #0891b2, #0e7490, #06b6d4) 1;
+    border-radius: 12px;
     padding: 0;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-}
-
-.ai-chatbox-card::before {
-    content: '🤖';
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    border: 2px solid #06b6d4;
+    flex-direction: row;
+    min-height: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .ai-chatbox-card:hover {
@@ -2189,11 +2187,14 @@ section {
 
 .ai-chatbox-screenshot-wrapper {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 3;
+    width: 45%;
+    flex-shrink: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ai-chatbox-screenshot-wrapper::before {
@@ -2231,9 +2232,12 @@ section {
 }
 
 .ai-chatbox-content {
-    padding: 0.5rem;
+    padding: 2rem;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .ai-chatbox-content h3 {
@@ -2328,31 +2332,17 @@ section {
     box-shadow: 0 8px 16px rgba(6, 182, 212, 0.4);
 }
 
-/* Voice AI Assistant Card Styles */
+/* Voice AI Assistant Card Styles - Side-by-Side Layout */
 .voice-ai-card {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
+    background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%);
+    border: 3px solid #a855f7;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: var(--shadow-medium);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: flex;
-    flex-direction: column;
-    border: 3px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-}
-
-.voice-ai-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: var(--border-radius);
-    padding: 3px;
-    background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f59e0b 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+    flex-direction: row;
+    min-height: 350px;
 }
 
 .voice-ai-card:hover {
@@ -2362,11 +2352,14 @@ section {
 
 .voice-ai-screenshot-wrapper {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 3;
+    width: 45%;
+    flex-shrink: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f59e0b 100%);
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .voice-ai-screenshot-wrapper::before {
@@ -2399,9 +2392,12 @@ section {
 }
 
 .voice-ai-content {
-    padding: 0.5rem;
+    padding: 2rem;
     background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%);
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .voice-ai-content h3 {
